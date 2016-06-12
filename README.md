@@ -1,7 +1,9 @@
 # Quick and Dirty N-Body Newtonian Gravity Simulator
 
 I was bored and decided to learn how to use scipy.odeint. This was the 
-result.
+result. 
+
+[Demo on YouTube](https://www.youtube.com/watch?v=dbfz2HLqo9w)
 
 # Build and Running Instructions
 
