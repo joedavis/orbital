@@ -3,12 +3,7 @@ cimport numpy as np
 
 import cython
 
-cdef extern from "math.h":
-    double sqrt(double)
-
-#from scipy.constants import G
-
-# Planck Units
+from libc.math cimport sqrt
 
 DTYPE = np.double
 ctypedef double DTYPE_t
