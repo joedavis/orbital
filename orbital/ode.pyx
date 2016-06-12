@@ -35,7 +35,7 @@ def ode_system(np.ndarray[DTYPE_t, ndim=1] coords,
 
     for i in range(n):
         for j in range(3):
-            dydx[i*3+j] = coords[(n+i)*3+j] / (2 * masses[i])
+            dydx[i*3+j] = coords[(n+i)*3+j] / masses[i]
 
     for i in range(n):
         for j in range(n):
