@@ -7,7 +7,7 @@ del Axes3D  # hide warnings
 
 T = 0.1  # timestep
 n = 50
-w = 10
+w = 12
 system = random_system(n, w, w, w)
 
 fig = plt.figure()
@@ -19,7 +19,6 @@ ax.set_zlim3d([-w, w])
 
 particles = ax.plot([], [], 'b.', zs=[])
 
-
 def update(t, particles):
     pos = system.positions
     system.step(T)
@@ -27,7 +26,9 @@ def update(t, particles):
     particles.set_3d_properties(pos[:, 2])
     return particles
 
-system_animation = anim.FuncAnimation(fig, update, 60000, fargs=particles,
+system_animation = anim.FuncAnimation(fig, update, 1200, fargs=particles,
                                       interval=30)
+
+#system_animation.save("system.mp4", bitrate=175000)
 
 plt.show()
